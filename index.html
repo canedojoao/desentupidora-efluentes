@@ -387,6 +387,69 @@
   .passo h3{font-size:1.02rem;margin-bottom:8px;}
   .passo p{font-size:0.9rem;color:#736d6c;max-width:240px;margin:0 auto;}
 
+  /* ---------- FAQ ---------- */
+  .faq{
+    background:#F7F8FA;
+  }
+  .faq-list{
+    max-width:800px;
+    margin:0 auto;
+  }
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--cinza-claro);
+    border-radius:14px;
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .faq-item[open]{
+    border-color:var(--azul-claro);
+    box-shadow:0 10px 26px rgba(1,60,178,0.08);
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:22px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    color:var(--cinza-escuro);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-icon{
+    flex-shrink:0;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:var(--cinza-claro);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .faq-icon::before,.faq-icon::after{
+    content:"";
+    position:absolute;
+    background:var(--azul-institucional);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .faq-icon::before{width:12px;height:2px;}
+  .faq-icon::after{width:2px;height:12px;}
+  .faq-item[open] .faq-icon{background:var(--azul-institucional);}
+  .faq-item[open] .faq-icon::before{background:#fff;}
+  .faq-item[open] .faq-icon::after{opacity:0;}
+  .faq-answer{
+    padding:0 26px 24px;
+    font-size:0.95rem;
+    color:#5a5453;
+    max-width:680px;
+  }
+
   /* ---------- CTA FAIXA ---------- */
   .cta-faixa{
     background:linear-gradient(120deg, var(--azul-institucional), var(--azul-principal));
@@ -642,6 +705,37 @@
         <h3>Problema resolvido</h3>
         <p>Desobstrução feita e ambiente limpo, sem transtorno pra você.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Dúvidas</span>
+      <h2>Perguntas frequentes dos serviços</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Quanto tempo leva para realizar o desentupimento de uma fossa ou caixa de gordura?<span class="faq-icon"></span></summary>
+        <p class="faq-answer">O tempo pode variar conforme o tamanho e o nível de obstrução. Em geral, o serviço é concluído de forma rápida, garantindo que o local esteja desentupido e higienizado com eficiência.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O que é o caminhão hidrojato e quais são os seus benefícios?<span class="faq-icon"></span></summary>
+        <p class="faq-answer">O caminhão hidrojato utiliza uma mangueira de alta pressão com alcance de até 100 metros, ideal para desobstruir redes e tubulações em locais difíceis. Ele oferece uma solução rápida e eficaz, removendo detritos com segurança.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quais locais a empresa consegue acessar para realizar o desentupimento?<span class="faq-icon"></span></summary>
+        <p class="faq-answer">Atendemos todos os tipos de locais de solo e subsolo. Para apartamentos e locais internos mais altos, utilizamos o equipamento roto rooter, uma solução adequada para essas áreas de difícil acesso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>É seguro utilizar o hidrojato em redes de esgoto e tubulações?<span class="faq-icon"></span></summary>
+        <p class="faq-answer">Sim, o hidrojato é uma técnica segura e não danifica as tubulações. Ele utiliza água em alta pressão, removendo resíduos sem necessidade de produtos químicos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quais são os serviços de desentupimento que a empresa oferece?<span class="faq-icon"></span></summary>
+        <p class="faq-answer">Oferecemos desentupimento de fossas, caixas de gordura, pias, esgotos e tubulações em geral. Nossos equipamentos e técnicas são adequados para diferentes tipos de desobstrução, garantindo resultados eficientes e duradouros.</p>
+      </details>
     </div>
   </div>
 </section>
